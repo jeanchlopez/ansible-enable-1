@@ -1,3 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - debug: 
+        msg: THIS IS YOUR MESSAGE: {{ message|default('THIS SPACE INTENTIONALLY LEFT BLANK') }}
 - hosts: all:!windows
   roles:
-  - common
+    - common
+
+
